@@ -1,0 +1,42 @@
+# Documentation
+*.md
+
+# Model files
+*.pth
+*.pt
+*.safetensors
+*.onnx
+smolvlm2_model/
+
+# Data
+calibration_dataset/
+*.jpg
+*.jpeg
+*.png
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.venv/
+smolvlm_env/
+venv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+.env
+
+# Build outputs
+compiled_model/
+build/
+dist/
+
+# Logs
+*.log
