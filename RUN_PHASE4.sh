@@ -1,12 +1,3 @@
-#!/bin/bash
-# ============================================================
-#  Phase 4 - Complete Execution Guide
-#  KV260 DPU Model Compilation
-#  
-#  This script provides step-by-step instructions and
-#  automation for Docker-based compilation
-# ============================================================
-
 set -e
 
 # ─── Colors ──────────────────────────────────────────────────
@@ -26,9 +17,7 @@ echo -e "\n${GREEN}════════════════════�
 echo -e "${GREEN}  Phase 4: KV260 DPU Model Compilation${NC}"
 echo -e "${GREEN}═══════════════════════════════════════════════════════${NC}\n"
 
-# ═════════════════════════════════════════════════════════════
 # STEP 1: Pre-Flight Checks
-# ═════════════════════════════════════════════════════════════
 
 echo -e "${YELLOW}[Step 1/5] Pre-flight checks${NC}"
 
