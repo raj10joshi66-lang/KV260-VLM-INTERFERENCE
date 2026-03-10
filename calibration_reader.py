@@ -1,8 +1,3 @@
-"""
-Phase 3 - Step 2: Calibration Data Reader for Vitis-AI / ONNX Runtime quantization
-Used by quantize_model.py — not run directly.
-"""
-
 import os
 import glob
 import numpy as np
@@ -10,13 +5,6 @@ from PIL import Image
 
 
 class VisionEncoderCalibrationReader:
-    """
-    Calibration data reader compatible with:
-      - onnxruntime.quantization.CalibrationDataReader  (host quantization)
-      - Vitis-AI vai_q_onnx calibration interface        (inside Docker)
-
-    Yields one preprocessed image tensor at a time.
-    """
 
     # ImageNet normalization constants (used by SigLIP / ViT-based encoders)
     MEAN = np.array([0.485, 0.456, 0.406], dtype=np.float32)
