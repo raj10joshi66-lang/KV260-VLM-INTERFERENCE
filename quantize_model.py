@@ -1,12 +1,3 @@
-"""
-Phase 3 - Step 3: INT8 Post-Training Quantization
-Run INSIDE the Vitis-AI Docker container:
-  conda activate vitis-ai-pytorch
-  python quantize_model.py
-
-Falls back to onnxruntime quantization if vai_q_onnx is unavailable.
-"""
-
 import os
 import sys
 import numpy as np
@@ -21,10 +12,6 @@ MAX_CALIB_IMG = 250
 
 
 def quantize_with_vitis_ai(reader):
-    """
-    Preferred path: use Vitis-AI vai_q_onnx for DPU-compatible INT8 model.
-    Must be run inside Vitis-AI Docker container.
-    """
     from vai_q_onnx import quantize_static, QuantType, CalibrationMethod
 
     print("[Vitis-AI] Running vai_q_onnx static quantization...")
@@ -48,10 +35,6 @@ def quantize_with_vitis_ai(reader):
 
 
 def quantize_with_onnxruntime(reader):
-    """
-    Fallback path: use standard onnxruntime quantization.
-    Produces INT8 ONNX model — may need re-compilation for DPU.
-    """
     from onnxruntime.quantization import (
         quantize_static,
         QuantType,
@@ -78,7 +61,6 @@ def quantize_with_onnxruntime(reader):
 
 
 def verify_quantized_model():
-    """Run a quick inference pass on the quantized model to verify it loads."""
     import onnxruntime as ort
 
     print("\n[Verification] Loading quantized model...")
