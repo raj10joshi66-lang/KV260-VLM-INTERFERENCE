@@ -1,10 +1,3 @@
-#!/bin/bash
-# ============================================================
-#  Phase 4: Compile quantized ONNX model for KV260 DPU
-#  Run INSIDE the Vitis-AI Docker container:
-#    chmod +x compile_model.sh && ./compile_model.sh
-# ============================================================
-
 set -e  # exit on any error
 
 # ─── Paths ───────────────────────────────────────────────────
