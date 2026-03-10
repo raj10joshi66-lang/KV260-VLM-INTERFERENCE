@@ -1,7 +1,3 @@
-#!/bin/bash
-# Phase 3 - Vitis-AI Docker Quantization Script
-# Usage: bash run_phase3_docker.sh
-
 set -e
 
 PROJECT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
