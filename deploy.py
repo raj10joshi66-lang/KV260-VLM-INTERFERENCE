@@ -1,13 +1,3 @@
-"""
-Phase 5: Simple DPU Inference Test Script for KV260
-Deploy on board to test vision encoder inference using compiled xmodel
-
-Usage:
-  python3 deploy.py --image <image_path>
-  python3 deploy.py --benchmark
-  python3 deploy.py --evaluate
-"""
-
 import argparse
 import os
 import sys
